@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type = "image/x-icon">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        
+        {% include 'blog/navbar.html' %}
+        
+                
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                {% block msg %}
+                {% endblock msg %}
+            </div>
+        </div>
+        <div class="container row">
+            {% block side %}
+            {% endblock side %}
+            {% block content %}
+            {% endblock content %}
+            
+        </div>
+    </div>
+
+  
+
+    <script src="{% static 'blog/jss/jquery.js' %}"></script>
+    
+    <script src="{% static 'blog/jss/popper.js' %}"></script>
+    
+    <script src="{% static 'blog/jss/bootstrap.js' %}"></script>
+</body>
+</html>
